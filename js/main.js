@@ -3,6 +3,7 @@ window.AudioContext = window.AudioContext || window.webkitAudioContext || window
 window.onload = function() {
     var audio = document.getElementById('audio');
     var ctx = new AudioContext();
+    audio.crossOrigin="anonymous";
     ctx.crossOrigin = "anonymous";
     var analyser = ctx.createAnalyser();
     var audioSrc = ctx.createMediaElementSource(audio);
