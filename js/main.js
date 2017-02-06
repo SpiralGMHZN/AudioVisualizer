@@ -21,7 +21,7 @@ window.onload = function() {
         capYPositionArray = [];
     ctx = canvas.getContext('2d'),
     gradient = ctx.createLinearGradient(0, 0, 0, 300);
-    gradient.addColorStop(1, '#EF3D35');
+    gradient.addColorStop(1, '#000000');
     gradient.addColorStop(0.5, '#ffffff');
     gradient.addColorStop(0, '#ffffff');
     function renderFrame() {
