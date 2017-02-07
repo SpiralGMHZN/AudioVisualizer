@@ -1,7 +1,7 @@
 window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext;
 
 window.onload = function() {
-    if (!window.color){window.color"black";}
+    if (!window.color){window.color"black"}
     var audio = document.getElementById('audio');
     var ctx = new AudioContext();
     audio.crossOrigin="anonymous";
