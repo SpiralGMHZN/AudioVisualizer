@@ -1,7 +1,7 @@
 window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext;
 
 window.onload = function() {
-    if (!window['clr']){window['clr']="black";}
+    if (!window.color){window.color"black";}
     var audio = document.getElementById('audio');
     var ctx = new AudioContext();
     audio.crossOrigin="anonymous";
@@ -23,7 +23,7 @@ window.onload = function() {
         capYPositionArray = [];
     ctx = canvas.getContext('2d'),
     gradient = ctx.createLinearGradient(0, 0, 0, 300);
-    gradient.addColorStop(1, window['clr']);
+    gradient.addColorStop(1, window.color);
     function renderFrame() {
         var array = new Uint8Array(analyser.frequencyBinCount);
         analyser.getByteFrequencyData(array);
