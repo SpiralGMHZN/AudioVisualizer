@@ -11,6 +11,7 @@ window.onload = function() {
     analyser.connect(ctx.destination);
     var frequencyData = new Uint8Array(analyser.frequencyBinCount);
     var canvas = document.getElementById('canvas')
+    canvas.style.zIndex=-5;
         cwidth = canvas.width,
         cheight = canvas.height - 2,
         meterWidth = 10,
