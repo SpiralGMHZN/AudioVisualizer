@@ -1,7 +1,12 @@
 window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext;
 
 window.onload = function() {
-    if (!window.color){window.color="black"}
+    if (!window.color){window.color="black";}
+    if (!window.capcolor){window.capcolor="#ffffff";}
+    if (!window.gap){window.gap=2;}
+    if (!window.amount){window.amount=3000;}
+    if (!window.width){window.width=10;}
+
     var audio = document.getElementById('audio');
     var ctx = new AudioContext();
     audio.crossOrigin="anonymous";
@@ -15,11 +20,11 @@ window.onload = function() {
     canvas.style.zIndex=-5;
         cwidth = canvas.width,
         cheight = canvas.height - 2,
-        meterWidth = 10,
-        gap = 2,
+        meterWidth = window.width,
+        gap = window.gap,
         capHeight = 2,
-        capStyle = '#ffffff',
-        meterNum = 3000 / (10 + 2),
+        capStyle = window.capcolor,
+        meterNum = window.amount / (10 + 2),
         capYPositionArray = [];
     ctx = canvas.getContext('2d'),
     gradient = ctx.createLinearGradient(0, 0, 0, 300);
