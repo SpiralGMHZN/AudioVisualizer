@@ -6,6 +6,7 @@ window.onload = function() {
     if (!window.gap){window.gap=2;}
     if (!window.amount){window.amount=3000;}
     if (!window.width){window.width=10;}
+    if (!window.capheight){window.capheight=0;}
 
     var audio = document.getElementById('audio');
     var ctx = new AudioContext();
@@ -22,7 +23,7 @@ window.onload = function() {
         cheight = canvas.height - 2,
         meterWidth = window.width,
         gap = window.gap,
-        capHeight = 2,
+        capHeight = window.capheight,
         capStyle = window.capcolor,
         meterNum = window.amount / (10 + 2),
         capYPositionArray = [];
