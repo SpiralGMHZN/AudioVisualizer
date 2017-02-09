@@ -32,10 +32,11 @@ window.onload = function() {
         capYPositionArray = [];
     ctx = canvas.getContext('2d'),
     gradient = ctx.createLinearGradient(0, 0, 0, 300);
+    gradient.addColorStop(0.25, "#000000");
+    gradient.addColorStop(0.5, window.color25);
+    gradient.addColorStop(0.75, window.color25);
     gradient.addColorStop(1, window.color);
-    gradient.addColorStop(0.75, window.color75);
-    gradient.addColorStop(0.5, window.color50);
-    gradient.addColorStop(0.25, window.color25);
+
     function renderFrame() {
         var array = new Uint8Array(analyser.frequencyBinCount);
         analyser.getByteFrequencyData(array);
